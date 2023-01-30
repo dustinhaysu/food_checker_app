@@ -13,14 +13,25 @@
 	</head>
 	<body>
 
-		<h1>Which Cocktail?</h1>
-		<input type="text" name="" value="">
-		<button type="button" name="button">Get Cocktail</button>
+		<h1>Is it vegan though?</h1>
 
-		<h2>Name</h2>
-		<img src="" alt="">
-		<h3>Instructions</h3>
+		<label for="barcode">Enter a UPC barcode number (12 digits)</label>
+			<!-- input boxes always pass strings -->
+		<input type="number" id="barcode" name="barcode">
+			<!-- 'onclick' best practice is to us an eventListerner() inside js -->
+		<button type="button" onclick="getFetch();" >Get Value</button>
 
+		<img id="product-img" src="" alt="">
+		<h2 id="product-name">Instructions</h2>
+		<table id="ingredient-table">
+			<tr>
+				<th>Ingredient</th>
+				<th>Vegetarian?</th>
+			</tr>
+
+		</table>
+
+ 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
