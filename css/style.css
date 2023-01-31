@@ -69,3 +69,13 @@ table, th, td {
   border: 1px solid;
   background-color: white;
 }
+
+/****************table colors yellow and red **************/
+
+.non-veg-item {
+  background-color: red;
+}
+
+.unknown-maybe-item {
+  background-color: yellow;
+}
