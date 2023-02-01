@@ -79,3 +79,12 @@ table, th, td {
 .unknown-maybe-item {
   background-color: yellow;
 }
+
+
+
+.inline-block{
+  border: solid 1px black;
+  width: 3%;
+  text-align: right;
+  background-color: orange;
+}
