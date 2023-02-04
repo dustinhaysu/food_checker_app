@@ -64,7 +64,7 @@ h2 {
 
 table {
   margin: 20px auto;
-  width: 78%;
+  width: 80%;
 }
 
 table, th, td {
@@ -82,15 +82,14 @@ table, th, td {
 ul li {
   list-style: none;
   width: 85%;
-  margin-top: 10px;
-  padding-right: 5%;
+  margin-top: 10px auto;
   
 }
 
 .format {
   text-align: center;
   width: 82%;
-  margin: 10px auto 0 11%;
+  margin: 10px auto;
 }
 
 #ingredient-table {
