@@ -82,7 +82,8 @@ table, th, td {
 ul li {
   list-style: none;
   width: 90%;
-  margin: 10px auto;
+  margin: auto;
+  margin-top: 10px
   
 }
 
