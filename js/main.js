@@ -16,8 +16,12 @@ if(inputVal.length !== 12){
         console.log(data)
         if(data.status === 1){// call additional stuff if product is found
           const item = new ProductInfo(data.product);
-           item.showInfo();
-           item.listIngredients()
+          //item.testCall();
+          item.showInfo();
+          item.listAllergens();
+           item.listIngredients();
+           item.listInfo();
+           item.servingsPerCal();
         } else if (data.status === 0) {//use JSON data
           alert(`product ${inputVal} not found. Please try another.`)
         }
@@ -33,10 +37,14 @@ class ProductInfo {
     this.name = productData.product_name
     this.ingredients = productData.ingredients
     this.image = productData.image_url
+    this.allergens = productData.allergens_hierarchy
+    this.info = productData.nutrient_levels_tags
+    this.servingSize = productData.serving_size
+    this.calorie = productData.nutriments['energy-kcal_serving']
   }
   
   // testCall() {
-  //   console.log(this.ingredients)
+  //   console.log(this.allergens)
   // }// test for return data from fetch
 
   showInfo() {
@@ -54,6 +62,9 @@ listIngredients () {
   }
 
   if(!(this.ingredients == null)){ // loose not strict ==, so will include 0 undefined etc. 
+   let table = document.getElementById('ingredient-table')
+    table.style.display = 'table';
+    document.querySelector('p').innerHTML = ''
   for(let key in this.ingredients){
     let newRow = tableRef.insertRow(-1)
     let newICell = newRow.insertCell(0)
@@ -62,10 +73,14 @@ listIngredients () {
     let newIText = document.createTextNode(
       this.ingredients[key].text
     )
+
     let vegStatus = this.ingredients[key].vegetarian == null ? '---' : this.ingredients[key].vegetarian // ternary to redefine undefined
+
     let veganStatus = this.ingredients[key].vegan == null ? '---' : this.ingredients[key].vegan
+
     let newVText = document.createTextNode(vegStatus)
     let newVeganText = document.createTextNode(veganStatus)
+
     newICell.appendChild(newIText)
     newVCell.appendChild(newVText)
     newVeganCell.appendChild(newVeganText)
@@ -84,4 +99,52 @@ listIngredients () {
   }
   }
 }
+
+listAllergens () { //generates <li> 
+  document.getElementById('allergens').innerHTML = ''
+  document.getElementById('allergy').innerHTML = 'Allergens'
+  if(this.allergens.length === 0){
+    document.getElementById('allergens').innerHTML = 'No Data'
+    document.getElementById('allergens').classList.add('unknown-maybe-item')
+    document.getElementById('allergens').classList.add('format')
+  }else{
+  for(let key in this.allergens){
+  let newListItem = document.createElement('li');
+  let LIText = this.allergens[key].slice(3)
+  let newListItemText = document.createTextNode(LIText)
+  newListItem.appendChild(newListItemText)
+  document.getElementById('allergens').appendChild(newListItem)
+  }
+  }
+}
+
+
+listInfo () { //generates <li> 
+  document.getElementById('info').innerHTML = ''
+  document.getElementById('add-info').innerHTML = "Additional Info"
+  for(let key in this.info){
+  let newListItem = document.createElement('li');
+  let LIText = this.info[key].slice(3).split('-').join(' ')
+  let newListItemText = document.createTextNode(LIText)
+  newListItem.appendChild(newListItemText)
+  document.getElementById('info').appendChild(newListItem)
+  if(LIText.includes('high')) {
+    newListItem.classList.add('non-veg-item')
+  }
+  if(LIText.includes('moderate')) {
+    newListItem.classList.add('unknown-maybe-item')
+  }
+  }
+
+   
+
+}
+
+servingsPerCal () {
+  document.getElementById('calories').innerHTML = `${this.calorie} calories per ${this.servingSize}`
+}
+
+
+
+
 }

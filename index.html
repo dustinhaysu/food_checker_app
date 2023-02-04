@@ -13,7 +13,9 @@
 	</head>
 	<body>
 
-		<h1>Is it vegan though?</h1>
+		<h1>Product Information</h1>
+		<h6>By Dustin Hays</h6>
+		<h6><a href="https://dustin-hays.netlify.app/">visit my website!</a></h6>
 
 		<label for="barcode">Enter a UPC barcode number (12 digits)</label>
 			<!-- input boxes always pass strings -->
@@ -21,10 +23,24 @@
 			<!-- 'onclick' best practice is to us an eventListerner() inside js -->
 		<button type="button" onclick="getFetch();" >Get Value</button>
 
-		<img id="product-img" src="" alt="">
-		<h2 id="product-name">Instructions</h2>
-		<table id="ingredient-table">
-			<tr>
+		<img id="product-img" src="img\barcode.jpg" alt="">
+		<h2 id="product-name"></h2>
+		<h4 id="calories"></h4>
+		<p>If your number is less than 12 digits try padding the front with zeros. Don't forget the digits to the far left and right of the barcode!</p>
+
+
+
+
+		<h3 id="allergy" class="margin"></h3>
+		<ul id="allergens" class="flex">
+		</ul>
+		<h3 id="add-info" class="margin"></h3>
+		<ul id="info" class="flex">
+		</ul>
+
+		
+		<table id="ingredient-table" class="table">
+			<tr class="table">
 				<th>Ingredient</th>
 				<th>Vegetarian?</th>
 				<th>Vegan</th>
