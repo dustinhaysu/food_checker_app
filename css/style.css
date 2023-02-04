@@ -27,9 +27,10 @@
 
 body {
   text-align: center;
+  margin: auto;
   font-size: 1.3rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  height: 500vh;
+  height: 400vh;
   background: linear-gradient(lightblue, white);
 }
 
@@ -73,15 +74,15 @@ table, th, td {
 }
 
 
-/* .flex { 
+.flex { 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-} */
+}
 
 ul li {
   list-style: none;
-  width: 100%;
+  width: 90%;
   margin: auto;
   margin-top: 10px
   
