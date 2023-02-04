@@ -73,11 +73,11 @@ table, th, td {
 }
 
 
-.flex { 
+/* .flex { 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
 ul li {
   list-style: none;
