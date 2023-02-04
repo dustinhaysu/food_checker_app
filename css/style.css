@@ -64,7 +64,7 @@ h2 {
 
 table {
   margin: 20px auto;
-  width: 80%;
+  width: 90%;
 }
 
 table, th, td {
@@ -81,14 +81,14 @@ table, th, td {
 
 ul li {
   list-style: none;
-  width: 85%;
+  width: 90%;
   margin-top: 10px auto;
   
 }
 
 .format {
   text-align: center;
-  width: 82%;
+  width: 90%;
   margin: 10px auto;
 }
 
