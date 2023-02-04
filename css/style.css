@@ -108,7 +108,9 @@ ul li {
 }
 
 p {
+  text-align: center;
   width: 90%;
+  margin: auto;
 }
 
 
