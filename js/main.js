@@ -1,4 +1,4 @@
-
+// https://world.openfoodfacts.org/
 
 function getFetch(){
   let inputVal = document.getElementById('barcode').value
