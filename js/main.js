@@ -4,10 +4,10 @@ let inputVal = ''
 
 //***************quagga****************** */
 
-Quagga.decodeSingle({
+Quagga.init({
   inputStream : {
     name : "Live",
-    type : "imageStream",
+    type : "LiveStream",
     target: document.querySelector('#scanner')  // Or '#yourElement' (optional)
   },
   decoder : {

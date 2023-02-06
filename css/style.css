@@ -265,8 +265,7 @@ p {
   #scanner {
     border: black solid 5px;
     margin: auto;
-    width: 300px;
-    height: 300px;
+    padding: 0 90% 0 90%;
   }
   }
 
