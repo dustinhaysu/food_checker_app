@@ -23,6 +23,7 @@ Quagga.init({
       console.log(data.codeResult.code);
       upc = data.codeResult.code;
       getFetch();
+      Quagga.stop();
       
     });
 });
