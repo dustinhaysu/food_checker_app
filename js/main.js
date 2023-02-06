@@ -52,6 +52,7 @@ Quagga.init({
 });
 
 document.getElementById('camera').addEventListener('click', event => {
+  inputVal = '';
   Quagga.init({
     inputStream : {
       name : "Live",
