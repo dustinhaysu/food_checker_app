@@ -17,10 +17,10 @@ Quagga.init({
     debug: {
         drawBoundingBox: true,
         showFrequency: true,
-        drawScanline: true,
+        drawScanLine: true,
         showPattern: true
     },
-    multiple: true
+    multiple: false
   },
   locator: {
     halfSample: false,
