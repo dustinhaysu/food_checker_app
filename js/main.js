@@ -7,7 +7,7 @@ Quagga.init({
   inputStream : {
     name : "Live",
     type : "LiveStream",
-    target: document.querySelector('#your-element')    // Or '#yourElement' (optional)
+    target: document.querySelector('#scanner')    // Or '#yourElement' (optional)
   },
   decoder : {
     readers : ["upc_reader"]

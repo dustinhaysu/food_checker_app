@@ -118,6 +118,13 @@ p {
   width: 90%;
   margin: auto;
 }
+
+/*************scanner***********************/
+
+#scanner {
+  max-width: 80%;
+  max-height: 300px;
+}
 }
 
 
@@ -240,6 +247,12 @@ p {
     width: 90%;
     margin: auto;
   }
+  /*************scanner***********************/
+
+#scanner {
+  max-width: 80%;
+  max-height: 300px;
+}
   }
 
 
