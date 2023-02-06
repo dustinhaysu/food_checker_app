@@ -19,10 +19,10 @@ Quagga.init({
       'upc_reader'
     ],
     debug: {
-        drawBoundingBox: true,
-        showFrequency: true,
-        drawScanLine: true,
-        showPattern: true
+        drawBoundingBox: false,
+        showFrequency: false,
+        drawScanLine: false,
+        showPattern: false
     },
     multiple: false
   },
