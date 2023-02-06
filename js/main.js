@@ -17,14 +17,7 @@ Quagga.init({
   decoder : {
     readers: [
       'upc_reader'
-    ],
-    debug: {
-        drawBoundingBox: false,
-        showFrequency: false,
-        drawScanLine: false,
-        showPattern: false
-    },
-    multiple: false
+    ]
   },
   locator: {
     halfSample: true,
