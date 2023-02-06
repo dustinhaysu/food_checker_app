@@ -3,7 +3,7 @@
 let inputVal = ''
 
 //***************quagga****************** */
-document.getElementById('camera').addEventListener('click', event =>{
+
 Quagga.init({
   inputStream : {
     name : "Live",
@@ -32,7 +32,7 @@ Quagga.init({
       
     });
 });
-});
+
 
 document.getElementById('button').addEventListener('click', event => {
   inputVal = document.getElementById('barcode').value
