@@ -3,6 +3,7 @@
 let inputVal = ''
 
 //***************quagga****************** */
+document.getElementById('camera').addEventListener('click', event =>{
 Quagga.init({
   inputStream : {
     name : "Live",
@@ -30,6 +31,7 @@ Quagga.init({
       Quagga.stop();
       
     });
+});
 });
 
 document.getElementById('button').addEventListener('click', event => {
