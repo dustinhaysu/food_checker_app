@@ -11,9 +11,7 @@ Quagga.init({
     type: "LiveStream",
     constraints: {
       width: 640,
-      height: 480,
-      facingMode: "environment",
-      deviceId: "7832475934759384534"
+      height: 480
     },
     area: { // defines rectangle of the detection/localization area
       top: "10%",    // top offset
