@@ -11,7 +11,16 @@ Quagga.init({
     target: document.querySelector('#scanner')    // Or '#yourElement' (optional)
   },
   decoder : {
-    readers : ["upc_reader"]
+    readers: [
+      'upc_reader'
+    ],
+    debug: {
+        drawBoundingBox: true,
+        showFrequency: true,
+        drawScanline: true,
+        showPattern: true
+    },
+    multiple: true
   },
   locator: {
     halfSample: false,
