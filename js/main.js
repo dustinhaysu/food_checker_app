@@ -10,8 +10,8 @@ Quagga.init({
     name: "Live",
     type: "LiveStream",
     constraints: {
-      width: 640,
-      height: 480
+      width: 200,
+      height: 100
     },
     area: { // defines rectangle of the detection/localization area
       top: "10%",    // top offset
