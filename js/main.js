@@ -8,7 +8,11 @@ Quagga.init({
   inputStream : {
     name : "Live",
     type : "LiveStream",
-    target: document.querySelector('#scanner')    // Or '#yourElement' (optional)
+    target: document.querySelector('#scanner'),  // Or '#yourElement' (optional)
+    constraints: {
+      width: 640,
+      height: 480
+    }
   },
   decoder : {
     readers: [
