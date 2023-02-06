@@ -16,7 +16,27 @@ Quagga.init({
   },
   decoder : {
     readers : ["upc_reader"]
+  },
+  locator: {
+    halfSample: true,
+    patchSize: "large", // x-small, small, medium, large, x-large
+    debug: {
+      showCanvas: false,
+      showPatches: false,
+      showFoundPatches: false,
+      showSkeleton: false,
+      showLabels: false,
+      showPatchLabels: false,
+      showRemainingPatchLabels: false,
+      boxFromPatches: {
+        showTransformed: false,
+        showTransformedBox: false,
+        showBB: false
+      }
+    }
   }
+
+  
 }, function(err) {
     if (err) {
         console.log(err);
@@ -43,6 +63,7 @@ document.getElementById('button').addEventListener('click', event => {
 //************************************* */
 
 function getFetch(){
+  console.log(inputVal)
 
 if(inputVal.length !== 12){
   alert('Please ensure that barcode is 12 characters.')
@@ -50,6 +71,8 @@ if(inputVal.length !== 12){
 }
 
   const url = `https://world.openfoodfacts.org/api/v0/product/${inputVal}.json`
+
+  console.log(url)
 
   fetch(url) // fetch object 
       .then(res => res.json()) // parse response as JSON
