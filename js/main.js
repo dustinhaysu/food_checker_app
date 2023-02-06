@@ -136,6 +136,7 @@ if(inputVal.length !== 12){
            item.servingsPerCal();
         } else if (data.status === 0) {//use JSON data
           alert(`product ${inputVal} not found. Please try another.`)
+          inputVal = ''
         }
         
       })
