@@ -122,7 +122,13 @@ p {
 /*************scanner***********************/
 
 #scanner-container {
-  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#scanner {
+  margin: auto;
 }
 }
 
@@ -251,6 +257,10 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  #scanner {
+    margin: auto;
   }
   }
 
