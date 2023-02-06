@@ -1,14 +1,28 @@
 // https://world.openfoodfacts.org/
 
 let inputVal = ''
+//target: document.querySelector('#scanner') 
 
 //***************quagga****************** */
 
 Quagga.init({
   inputStream : {
-    name : "Live",
-    type : "LiveStream",
-    target: document.querySelector('#scanner')    // Or '#yourElement' (optional)
+    name: "Live",
+    type: "LiveStream",
+    constraints: {
+      width: 640,
+      height: 480,
+      facingMode: "environment",
+      deviceId: "7832475934759384534"
+    },
+    area: { // defines rectangle of the detection/localization area
+      top: "10%",    // top offset
+      right: "10%",  // right offset
+      left: "10%",   // left offset
+      bottom: "10%"  // bottom offset
+    },
+    singleChannel: false, // true: only the red color-channel is read
+    target: document.querySelector('#scanner')
   },
   decoder : {
     readers: [
