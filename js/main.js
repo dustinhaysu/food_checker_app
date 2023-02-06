@@ -30,6 +30,7 @@ Quagga.init({
 
 getElementById('button').addEventListener('click', event => {
   inputVal = document.getElementById('barcode').value
+  getFetch();
 })
 
 //************************************* */
