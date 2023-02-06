@@ -122,7 +122,6 @@ p {
 /*************scanner***********************/
 
 #scanner-container {
-  border: solid green 5px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -131,9 +130,7 @@ p {
 }
 
 #scanner {
-  border: black solid 5px;
-  margin: auto;
-  padding: 0 90% 0 90%;
+  padding: auto;
 }
 }
 
@@ -259,7 +256,6 @@ p {
   }
 
   #scanner-container {
-    border: solid green 5px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -268,9 +264,7 @@ p {
   }
 
   #scanner {
-    border: black solid 5px;
-    margin: auto;
-    padding: 0 90% 0 90%;
+    padding: auto;
   }
   }
 
