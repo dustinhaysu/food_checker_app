@@ -64,7 +64,7 @@ document.getElementById('camera').addEventListener('click', event => {
       ]
     },
     locator: {
-      halfSample: false,
+      halfSample: true,
       patchSize: "x-large", // x-small, small, medium, large, x-large
       debug: {
         showCanvas: false,
