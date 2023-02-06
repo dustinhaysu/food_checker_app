@@ -62,6 +62,8 @@ if(inputVal.length !== 12){
       .catch(err => {
           console.log(`error ${err}`)
       });
+      inputVal = '';
+      upc = '';
 }
 
 class ProductInfo {
