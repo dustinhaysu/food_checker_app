@@ -27,8 +27,9 @@
 			<!-- input boxes always pass strings -->
 		<input type="number" id="barcode" name="barcode">
 			<!-- 'onclick' best practice is to us an eventListerner() inside js -->
+			<br>
 		<button id="button" type="button">Get Value</button>
-
+<br>
 		<img id="product-img" src="img\barcode.jpg" alt="">
 		<h2 id="product-name"></h2>
 		<h4 id="calories"></h4>
@@ -53,7 +54,10 @@
 			</tr>
 
 		</table>
+		<section class="inline-block">
 <button type="button" class="camera">Refresh Scanner</button>
+<div id="remove-camera"></div>
+</section>
 	<section id="scanner-container">
 		<div id="scanner"></div>
 	</section>

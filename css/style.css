@@ -54,8 +54,7 @@ input {
 }
 
 button {
-  margin: 20px auto;
-  display: block; /*forces button to the next line*/
+  margin: 5px;
 }
 
 img {
@@ -132,6 +131,11 @@ p {
 #scanner {
   padding: auto;
 }
+
+.inline-block {
+  display: flex;
+  justify-content: center;
+}
 }
 
 
@@ -191,9 +195,8 @@ p {
   }
   
   button {
-    margin: 20px auto;
-    display: block; /*forces button to the next line*/
-  }
+    margin: 5px; 
+  } 
   
   img {
     max-width: 80%;
@@ -266,6 +269,17 @@ p {
   #scanner {
     padding: auto;
   }
+
+  .inline-block {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  #remove {
+    background-color: green;
+  }
+
   }
 
 

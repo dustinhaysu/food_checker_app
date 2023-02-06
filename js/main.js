@@ -58,16 +58,50 @@ Quagga.init({
 let buttons = document.getElementsByClassName('camera')
 for(i=0; i<buttons.length; i++){
   buttons[i].addEventListener('click', event => {
-    upcScanner()
+    upcScanner();
+    toggleCameraButton();
   })
 }
-
+ 
 
 document.getElementById('button').addEventListener('click', event => {
   inputVal = document.getElementById('barcode').value
   getFetch();
   console.log('party time')
 })
+
+function toggleCameraButton() {
+  //clear inner html
+  document.getElementById('remove-camera').innerHTML = ''        
+  // Create element.
+  let button = document.createElement('button'); 
+    
+  // Create the text node for anchor element.
+  let text = document.createTextNode("Remove Scanner");
+    
+  // Append the text node to anchor element.
+  button.appendChild(text); 
+
+  // Set the title.
+  //button.title = "This is Link"; 
+    
+  // Append the anchor element to the body.
+  document.getElementById('remove-camera').appendChild(button); 
+}
+
+document.getElementById('remove-camera').addEventListener('click', event => {
+  toggleCamera()
+  console.log('camera')
+})
+
+function toggleCamera() {
+  document.getElementById('scanner').innerHTML = ''
+  console.log('fun')
+  
+  }
+
+
+
 
 //************************************* */
 
