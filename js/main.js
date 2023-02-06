@@ -18,8 +18,8 @@ Quagga.init({
     readers : ["upc_reader"]
   },
   locator: {
-    halfSample: true,
-    patchSize: "large", // x-small, small, medium, large, x-large
+    halfSample: false,
+    patchSize: "x-small", // x-small, small, medium, large, x-large
     debug: {
       showCanvas: false,
       showPatches: false,
