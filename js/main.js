@@ -1,6 +1,6 @@
 // https://world.openfoodfacts.org/
 
-let upc = ''
+let inputVal = ''
 
 //***************quagga****************** */
 Quagga.init({
@@ -21,20 +21,20 @@ Quagga.init({
     Quagga.start();
     Quagga.onDetected(data => {
       console.log(data.codeResult.code);
-      upc = data.codeResult.code;
+      inputVal = data.codeResult.code;
       getFetch();
       Quagga.stop();
       
     });
 });
 
-
+getElementById('button').addEventListener('click', event => {
+  inputVal = document.getElementById('barcode').value
+})
 
 //************************************* */
 
 function getFetch(){
-  let inputVal = document.getElementById('barcode').value
-  inputVal = upc
 
 if(inputVal.length !== 12){
   alert('Please ensure that barcode is 12 characters.')
@@ -63,8 +63,6 @@ if(inputVal.length !== 12){
       .catch(err => {
           console.log(`error ${err}`)
       });
-      inputVal = '';
-      upc = '';
 }
 
 class ProductInfo {
