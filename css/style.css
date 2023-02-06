@@ -122,8 +122,7 @@ p {
 /*************scanner***********************/
 
 #scanner {
-  max-width: 80%;
-  max-height: 300px;
+  max-width: 20%;
 }
 }
 
@@ -250,7 +249,7 @@ p {
   /*************scanner***********************/
 
 #scanner {
-  max-width: 80%;
+  max-width: 20%;
 }
   }
 
