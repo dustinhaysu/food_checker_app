@@ -4,6 +4,8 @@ let inputVal = ''
 
 //***************quagga****************** */
 
+
+function upcScanner(){
 Quagga.init({
   inputStream : {
     name : "Live",
@@ -50,56 +52,15 @@ Quagga.init({
       
     });
 });
+};
 
-document.getElementById('camera').addEventListener('click', event => {
-  inputVal = '';
-  Quagga.init({
-    inputStream : {
-      name : "Live",
-      type : "LiveStream",
-      target: document.querySelector('#scanner')  // Or '#yourElement' (optional)
-    },
-    decoder : {
-      readers: [
-        'upc_reader'
-      ]
-    },
-    locator: {
-      halfSample: true,
-      patchSize: "x-large", // x-small, small, medium, large, x-large
-      debug: {
-        showCanvas: false,
-        showPatches: false,
-        showFoundPatches: false,
-        showSkeleton: false,
-        showLabels: false,
-        showPatchLabels: false,
-        showRemainingPatchLabels: false,
-        boxFromPatches: {
-          showTransformed: false,
-          showTransformedBox: false,
-          showBB: false
-        }
-      }
-    }
-  
-    
-  }, function(err) {
-      if (err) {
-          console.log(err);
-          return
-      }
-      console.log("Initialization finished. Ready to start");
-      Quagga.start();
-      Quagga.onDetected(data => {
-        console.log(data.codeResult.code);
-        inputVal = data.codeResult.code;
-        getFetch();
-        Quagga.stop();
-        
-      });
-  });
-})
+
+let buttons = document.getElementsByClassName('camera')
+for(i=0; i<buttons.length; i++){
+  buttons[i].addEventListener('click', event => {
+    upcScanner()
+  })
+}
 
 
 document.getElementById('button').addEventListener('click', event => {
