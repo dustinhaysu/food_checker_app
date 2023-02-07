@@ -22,7 +22,7 @@ Quagga.init({
   },
   locator: {
     halfSample: true,
-    patchSize: "medium", // x-small, small, medium, large, x-large
+    patchSize: "large", // x-small, small, medium, large, x-large
     debug: {
       showCanvas: false,
       showPatches: false,
