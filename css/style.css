@@ -34,7 +34,7 @@ body {
   margin: auto;
   font-size: 1.3rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  height: 400vh;
+  height: 600vh;
   background: linear-gradient(lightblue, white);
 }
 
@@ -175,7 +175,7 @@ p {
     margin: auto;
     font-size: 1.3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 400vh;
+    height: 600vh;
     background: linear-gradient(lightblue, white);
   }
   
