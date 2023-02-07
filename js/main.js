@@ -53,13 +53,14 @@ Quagga.init({
     });
 });
 };
-
+//*************************************************************** */
 
 let buttons = document.getElementsByClassName('camera')
 for(i=0; i<buttons.length; i++){
   buttons[i].addEventListener('click', event => {
     upcScanner();
     toggleCameraButton();
+    Window.location.href='#scanner-area'
   })
 }
  
