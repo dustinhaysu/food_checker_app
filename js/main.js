@@ -72,7 +72,6 @@ for(i=0; i<buttons.length; i++){
 document.getElementById('button').addEventListener('click', event => {
   inputVal = document.getElementById('barcode').value
   getFetch();
-  console.log('party time')
 })
 
 document.getElementById('remove-camera').addEventListener('click', event => {
@@ -136,7 +135,7 @@ if(inputVal.length !== 12){
            item.listIngredients();
            item.listInfo();
            item.servingsPerCal();
-           window.location.href='#product-img'
+           window.location.href='#go-here'
         } else if (data.status === 0) {//use JSON data
           alert(`product ${inputVal} not found. Please try another.`)
           inputVal = ''
