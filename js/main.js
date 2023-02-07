@@ -254,10 +254,19 @@ listInfo () { //generates <li>
 }
 
 servingsPerCal () {
+  if(calorie==='undefined' || this.servingSize==='undefined'){
+    document.getElementById('calories').innerHTML = `No Data`
+    document.getElementById('calories').classList.add('unknown-maybe-item')
+}else {
   document.getElementById('calories').innerHTML = `${this.calorie} calories per ${this.servingSize}`
 }
 
-
+}
 
 
 }
+
+
+
+
+
