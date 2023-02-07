@@ -15,10 +15,9 @@
 	<body>
 
 		<h1>Product Information</h1>
-		<h6>By Dustin Hays</h6>
-		<h6><a href="https://dustin-hays.netlify.app/">visit my website!</a></h6>
+		<p id="introduction-statement">If your number is less than 12 digits try padding the front with zeros. Don't forget the digits to the far left and right of the barcode. The UPC scanner is automated so just move your device around until the software recognizes a barcode.</p>
 		
-		<button type="button" class="camera">UPC Scanner</button>
+		<button type="button" class="camera" id="start">Scanner</button>
 		<br>
 		<b>OR</b>
 		<br>
@@ -30,10 +29,11 @@
 			<br>
 		<button id="button" type="button">Get Value</button>
 <br>
+<h6>My name is Dustin Hays <a href="https://dustin-hays.netlify.app/">visit my website!</a></h6>
 		<img id="product-img" src="img\barcode.jpg" alt="">
 		<h2 id="product-name"></h2>
 		<h4 id="calories"></h4>
-		<p>If your number is less than 12 digits try padding the front with zeros. Don't forget the digits to the far left and right of the barcode. The UPC scanner is automated so just move your device around until the software recognizes a barcode. Thanks for visiting!</p>
+		
 
 
 
@@ -54,7 +54,7 @@
 			</tr>
 
 		</table>
-		<section class="inline-block" id="scaner-area">
+		<section class="inline-block" id="scanner-area">
 <button type="button" class="camera">Refresh Scanner</button>
 <div id="remove-camera"></div>
 </section>

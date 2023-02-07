@@ -1,4 +1,5 @@
 // https://world.openfoodfacts.org/
+window.location.href='#start'
 
 let inputVal = ''
 
@@ -60,7 +61,7 @@ for(i=0; i<buttons.length; i++){
   buttons[i].addEventListener('click', event => {
     upcScanner();
     toggleCameraButton();
-    Window.location.href='#scanner-area'
+    window.location.href='#scanner-area'
   })
 }
  
@@ -130,6 +131,7 @@ if(inputVal.length !== 12){
            item.listIngredients();
            item.listInfo();
            item.servingsPerCal();
+           window.location.href='#product-img'
         } else if (data.status === 0) {//use JSON data
           alert(`product ${inputVal} not found. Please try another.`)
           inputVal = ''
@@ -157,6 +159,7 @@ class ProductInfo {
   // }// test for return data from fetch
 
   showInfo() {
+    document.getElementById('introduction-statement').innerHTML=''
     document.getElementById('product-img').src= this.image
     document.getElementById('product-name').innerText = this.name  
   }
