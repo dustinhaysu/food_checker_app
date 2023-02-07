@@ -1,4 +1,5 @@
-// https://world.openfoodfacts.org/
+// food facts api https://world.openfoodfacts.org/
+//UPC scanner : https://github.com/ericblade/quagga2#configobject
 window.location.href='#start'
 
 let inputVal = ''
@@ -19,7 +20,7 @@ Quagga.init({
     ]
   },
   locator: {
-    halfSample: false,
+    halfSample: true,
     patchSize: "medium", // x-small, small, medium, large, x-large
     debug: {
       showCanvas: false,
