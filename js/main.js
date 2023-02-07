@@ -1,5 +1,6 @@
 // food facts api https://world.openfoodfacts.org/
 //UPC scanner : https://github.com/ericblade/quagga2#configobject
+//globals**************************************************************/
 window.location.href='#start'
 
 let inputVal = ''
@@ -55,7 +56,8 @@ Quagga.init({
     });
 });
 };
-//*************************************************************** */
+
+//event listeners*************************************************************** */
 
 let buttons = document.getElementsByClassName('camera')
 for(i=0; i<buttons.length; i++){
@@ -72,6 +74,12 @@ document.getElementById('button').addEventListener('click', event => {
   getFetch();
   console.log('party time')
 })
+
+document.getElementById('remove-camera').addEventListener('click', event => {
+  toggleCamera()
+})
+
+// functions ************************************************ */
 
 function toggleCameraButton() {
   //clear inner html
@@ -92,21 +100,17 @@ function toggleCameraButton() {
   document.getElementById('remove-camera').appendChild(button); 
 }
 
-document.getElementById('remove-camera').addEventListener('click', event => {
-  toggleCamera()
-  console.log('camera')
-})
+
 
 function toggleCamera() {
   document.getElementById('scanner').innerHTML = ''
-  console.log('fun')
   
   }
 
 
 
 
-//************************************* */
+//get fetch************************************* */
 
 function getFetch(){
   console.log(inputVal)
@@ -143,6 +147,8 @@ if(inputVal.length !== 12){
           console.log(`error ${err}`)
       });
 }
+
+//Object ******************************************************* */
 
 class ProductInfo {
   constructor(productData){//I am passing in data
@@ -266,7 +272,7 @@ servingsPerCal () {
 
 }
 
-
+//end object************************************************************ */
 
 
 
