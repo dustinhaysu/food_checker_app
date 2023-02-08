@@ -64,7 +64,7 @@ Quagga.init({
 let buttons = document.getElementsByClassName('camera')
 for(i=0; i<buttons.length; i++){
   buttons[i].addEventListener('click', event => {
-    upcScanner();
+    Quagga.start();
     toggleCameraButton();
     window.location.href='#scanner-area'
   })
