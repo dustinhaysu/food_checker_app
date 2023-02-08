@@ -46,14 +46,16 @@ Quagga.init({
         return
     }
     console.log("Initialization finished. Ready to start");
+    Quagga.offDetected()
     Quagga.start();
     Quagga.onDetected(data => {
       console.log(data.codeResult.code);
-      inputVal = data.codeResult.code;     
+      inputVal = data.codeResult.code; 
+      Quagga.stop();
+      getFetch();    
     });
-    Quagga.stop();
-    getFetch();
-    Quagga.offDetected()
+    
+    
 
 });
 };
