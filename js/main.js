@@ -8,7 +8,7 @@ let inputVal = ''
 //***************quagga****************** */
 
 
-//function upcScanner(){
+function upcScanner(){
 Quagga.init({
   inputStream : {
     name : "Live",
@@ -49,15 +49,14 @@ Quagga.init({
     Quagga.start();
     Quagga.onDetected(data => {
       console.log(data.codeResult.code);
-      inputVal = data.codeResult.code;
-      Quagga.stop();
-      getFetch();
-      return;
-   
-      
+      inputVal = data.codeResult.code;     
     });
+    Quagga.stop();
+    getFetch();
+    Quagga.offDetected()
+
 });
-//};
+};
 
 //event listeners*************************************************************** */
 
