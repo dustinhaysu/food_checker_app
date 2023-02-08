@@ -50,8 +50,10 @@ Quagga.init({
     Quagga.onDetected(data => {
       console.log(data.codeResult.code);
       inputVal = data.codeResult.code;
-      getFetch();
       Quagga.stop();
+      getFetch();
+      return;
+   
       
     });
 });
@@ -140,6 +142,7 @@ if(inputVal.length !== 12){
         } else if (data.status === 0) {//use JSON data
           alert(`product ${inputVal} not found. Please try another.`)
           inputVal = ''
+          return
         }
         
       })
