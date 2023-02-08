@@ -136,7 +136,7 @@ if(inputVal.length !== 12){
            item.listIngredients();
            item.listInfo();
            item.servingsPerCal();
-           window.location.href='#go-here'
+           window.location.href='#product-img'
         } else if (data.status === 0) {//use JSON data
           alert(`product ${inputVal} not found. Please try another.`)
           inputVal = ''
@@ -260,7 +260,7 @@ listInfo () { //generates <li>
 }
 
 servingsPerCal () {
-  if(calorie==='undefined' || this.servingSize==='undefined'){
+  if(this.calorie==='undefined' || this.servingSize==='undefined'){
     document.getElementById('calories').innerHTML = `No Data`
     document.getElementById('calories').classList.add('unknown-maybe-item')
 }else {
