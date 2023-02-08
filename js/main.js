@@ -102,7 +102,8 @@ function toggleCameraButton() {
 
 
 function toggleCamera() {
-  document.getElementById('scanner').innerHTML = ''
+  document.getElementById('scanner').innerHTML = '';
+  document.getElementById('remove-camera').innerHTML = ''; 
   
   }
 
